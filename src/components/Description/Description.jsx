@@ -1,16 +1,24 @@
 import { useState } from "react";
 
 export const Description = () => {
-  const [title, setTitle] = useState("");
-  const [message, setMessage] = useState("");
+  const [description, setDescription] = useState("");
+  const submit = (e) => {
+    e.preventDefault();
+    console.log({ description });
 
-  console.log(title);
+    setDescription("");
+  };
+
   return (
-    <input
-      type="text"
-      placeholder="Título da Nota"
-      onChange={(e) => setTitle(e.target.value)}
-    />
+    <form onSubmit={submit}>
+      <input
+        type="text"
+        placeholder="Digite aqui sua descrição"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <button type="submit">Inserir Valor</button>
+    </form>
   );
 };
 
