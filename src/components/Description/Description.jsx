@@ -1,8 +1,16 @@
+import { useState } from "react";
+
 export const Description = () => {
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState("");
+
+  console.log(title);
   return (
-    <form>
-      <input type="text" placeholder="Digite aqui sua descrição" />
-    </form>
+    <input
+      type="text"
+      placeholder="Título da Nota"
+      onChange={(e) => setTitle(e.target.value)}
+    />
   );
 };
 
