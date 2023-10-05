@@ -1,0 +1,16 @@
+.logo {
+  position: absolute;
+  height: 22.19%;
+  width: 8.18%;
+  top: 36.36%;
+  right: 74.42%;
+  bottom: 41.45%;
+  left: 17.4%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.header {
+  box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+}
