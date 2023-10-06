@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import FinanceForm from "./components/FinanceForm/FinanceForm";
+import Header from "./components/Header";
+import FinanceForm from "./components/FinanceForm";
 
 const App = () => {
   return (
