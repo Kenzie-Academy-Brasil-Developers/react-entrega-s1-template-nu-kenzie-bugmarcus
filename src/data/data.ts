@@ -7,5 +7,5 @@ export interface TypeOfValue {
 
 export const typeOfValue: readonly TypeOfValue[] = [
   { value: "entrada", label: "Entrada", isFixed: true },
-  { value: "saida", label: "Saida" },
+  { value: "despesa", label: "Despesa" },
 ];

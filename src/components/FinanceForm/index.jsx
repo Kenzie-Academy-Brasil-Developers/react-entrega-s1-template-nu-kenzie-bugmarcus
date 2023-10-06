@@ -3,12 +3,22 @@ import Description from "../Description";
 import Valor from "../Valor";
 import ValueType from "../ValueType";
 
-export const FinanceForm = () => {
+const FinanceForm = ({ addFinanceItem }) => {
   const [formValues, setFormValues] = useState({
     description: "",
     valor: "",
     valueType: "",
   });
+
+  const submit = (e) => {
+    e.preventDefault();
+    const newFinanceItem = {
+      description: formValues.description,
+      valor: formValues.valor,
+      valueType: formValues.valueType,
+    };
+    addFinanceItem(newFinanceItem);
+  };
 
   const handleDescriptionChange = (value) => {
     setFormValues((prevValues) => ({
@@ -31,19 +41,8 @@ export const FinanceForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formValues);
-
-    setFormValues({
-      description: "",
-      valor: "",
-      valueType: "",
-    });
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={submit}>
       <p>Descrição</p>
       <Description
         value={formValues.description}
