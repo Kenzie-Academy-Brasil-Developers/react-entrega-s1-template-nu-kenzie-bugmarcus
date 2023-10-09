@@ -1,3 +1,12 @@
+@import-normalize;
+
+.bodyPage {
+  display: flex;
+  gap: 4.12rem;
+  margin-left: 16.12rem;
+  margin-top: 2.44rem;
+}
+
 .title {
   color: var(--grey-4, #212529);
 

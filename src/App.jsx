@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import FinanceForm from "./components/FinanceForm";
 import FinanceList from "./components/FinanceList";
 import Header from "./components/Header";
+import styles from "./App.module.css";
+import "normalize.css";
 
 const App = () => {
   const [financeItems, setFinanceItems] = useState([]);
@@ -22,8 +24,10 @@ const App = () => {
   return (
     <div>
       <Header />
-      <FinanceForm addFinanceItem={addFinanceItem} />
-      <FinanceList financeItems={financeItems} />
+      <div className={styles.bodyPage}>
+        <FinanceForm addFinanceItem={addFinanceItem} />
+        <FinanceList financeItems={financeItems} />
+      </div>
     </div>
   );
 };

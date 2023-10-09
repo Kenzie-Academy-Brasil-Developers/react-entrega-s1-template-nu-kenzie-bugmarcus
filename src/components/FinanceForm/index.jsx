@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Description from "../Description";
 import Valor from "../Valor";
 import ValueType from "../ValueType";
+import styles from "../FinanceForm/FinanceForm.module.css";
 
 const FinanceForm = ({ addFinanceItem }) => {
   const [formValues, setFormValues] = useState({
@@ -42,21 +43,22 @@ const FinanceForm = ({ addFinanceItem }) => {
   };
 
   return (
-    <form onSubmit={submit}>
-      <p>Descrição</p>
+    <form className={styles.main} onSubmit={submit}>
+      <p className={styles.title}>Descrição</p>
       <Description
         value={formValues.description}
         onChange={handleDescriptionChange}
       />
-      <p>Ex: Compra de roupas</p>
-      <p>Valor (R$)</p>
+      <p className={styles.example}>Ex: Compra de roupas</p>
       <Valor value={formValues.valor} onChange={handleValorChange} />
       <p>Tipo de valor</p>
       <ValueType
         value={formValues.valueType}
         onChange={handleValueTypeChange}
       />
-      <button type="submit">Inserir Valor</button>
+      <button type="submit" className={styles.button}>
+        Inserir Valor
+      </button>
     </form>
   );
 };

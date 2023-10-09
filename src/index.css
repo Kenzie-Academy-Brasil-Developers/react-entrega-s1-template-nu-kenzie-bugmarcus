@@ -43,3 +43,7 @@ body {
   --br-181xl: 200px;
   --br-5xs: 8px;
 }
+
+body {
+  font-family: var(--title1);
+}

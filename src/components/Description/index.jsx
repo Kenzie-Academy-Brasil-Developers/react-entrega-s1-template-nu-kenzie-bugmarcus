@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import styles from "../Description/Description.module.css";
 
 export const Description = ({ value, onChange }) => {
   return (
     <input
+      className={styles.main}
       type="text"
       placeholder="Digite aqui sua descrição"
       id="title"

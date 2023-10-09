@@ -1,189 +1,47 @@
-.instanceChild {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
-  background-color: var(--color-white);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-.label {
-  position: absolute;
-  top: 0%;
-  left: 0.62%;
-  line-height: 1.38rem;
-  color: var(--grey-100);
-}
-.helperText1 {
-  position: absolute;
-  top: 83%;
-  left: 0%;
-  line-height: 1.25rem;
-}
-.placeholder {
-  position: relative;
-  line-height: 1.63rem;
-}
-.placeholderWrapper {
-  position: absolute;
-  height: 48%;
-  width: 100%;
-  top: 31%;
-  right: 0%;
-  bottom: 21%;
-  left: 0%;
-  border-radius: var(--br-5xs);
-  background-color: var(--grey-0);
-  border: 2px solid var(--grey-0);
-  box-sizing: border-box;
+.main {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-base);
-  font-size: var(--headline-size);
-}
-.component1 {
-  position: absolute;
-  height: 30.39%;
-  width: 99.84%;
-  top: 0%;
-  right: 0.16%;
-  bottom: 69.61%;
-  left: 0%;
-}
-.buttonText1 {
-  position: relative;
-  font-weight: 500;
-}
-.buttonPrimary {
-  position: absolute;
-  height: 13.26%;
-  width: 99.84%;
-  top: 86.74%;
-  right: 0%;
-  bottom: 0%;
-  left: 0.16%;
-  border-radius: var(--br-5xs);
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding: 0.81rem 1.25rem;
-  font-size: var(--headline-size);
-  color: var(--color-white);
+  flex-shrink: 0;
+  border: solid 1px var(--grey-2);
+  padding-left: 1.31rem;
+  padding-right: 1.25rem;
+  padding-bottom: 2.62rem;
 }
-.valor {
-  position: absolute;
-  top: 0%;
-  left: 0.71%;
-  line-height: 1.38rem;
+
+.title {
+  font-family: var(--title1);
+  color: var(--grey-4);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
 }
-.placeholderContainer {
-  position: absolute;
-  height: 60.76%;
-  width: 100%;
-  top: 39.24%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
-  border-radius: var(--br-5xs);
-  background-color: var(--grey-0);
-  border: 2px solid var(--grey-0);
-  box-sizing: border-box;
+
+.textArea {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-base);
-  text-align: right;
-  font-size: var(--headline-size);
-  color: var(--grey-50);
+  background-color: red;
 }
-.inputvaluenumber {
-  position: absolute;
-  height: 47.02%;
-  width: 100%;
-  top: 0%;
-  right: 0%;
-  bottom: 52.98%;
-  left: 0%;
+
+.example {
+  color: var(--grey-50, #868e96);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 166.667% */
+  margin-bottom: 2.56rem;
 }
-.angleDown {
-  position: relative;
-  font-size: var(--headline-size);
-  line-height: 1.63rem;
-  font-family: var(--font-font-awesome-5-free);
-  color: var(--grey-50);
-}
-.placeholderParent {
-  position: absolute;
-  height: 60.76%;
-  width: 100%;
-  top: 39.24%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
-  border-radius: var(--br-5xs);
-  background-color: var(--grey-0);
-  border: 2px solid var(--grey-0);
-  box-sizing: border-box;
+
+.button {
   display: flex;
-  flex-direction: row;
+  width: 19.625rem;
+  height: 3rem;
+  padding: 0.8125rem 1.25rem;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 0rem var(--padding-base);
-  color: var(--grey-3);
-}
-.inputselect {
-  position: absolute;
-  height: 47.02%;
-  width: 99.68%;
-  top: 52.98%;
-  right: 0%;
-  bottom: 0%;
-  left: 0.32%;
-}
-.inputvaluenumberParent {
-  position: absolute;
-  height: 46.41%;
-  width: 99.84%;
-  top: 33.15%;
-  right: 0%;
-  bottom: 20.44%;
-  left: 0.16%;
-  color: var(--grey-100);
-}
-.component1Parent {
-  position: absolute;
-  height: 83.41%;
-  width: 88.59%;
-  top: 6.91%;
-  right: 5.49%;
-  bottom: 9.68%;
-  left: 5.92%;
-}
-.rectangleParent {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
-}
-.instanceParent {
-  position: relative;
-  width: 100%;
-  height: 27.13rem;
-  text-align: left;
-  font-size: var(--caption-size);
-  color: var(--grey-50);
-  font-family: var(--caption);
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-primary, #fd377e);
+  background: var(--color-primary, #fd377e);
+  color: white;
 }
