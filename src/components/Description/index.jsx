@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import styles from "../Description/Description.module.css";
+import styles from "../Description/Description.module.scss";
 
 export const Description = ({ value, onChange }) => {
   return (

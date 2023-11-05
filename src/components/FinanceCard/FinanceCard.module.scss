@@ -2,6 +2,8 @@
   border-radius: 0.25rem;
   background: var(--grey-1, #f8f9fa);
   display: flex;
+  width: 35rem;
+  height: 5.4375rem;
   & .barGreen {
     border-radius: 0.25rem 0rem 0rem 0.25rem;
     background: var(--color-secondary, #03b898);
@@ -9,8 +11,24 @@
     height: 5.4375rem;
     flex-shrink: 0;
   }
+  & .barGrey {
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    background: var(--grey-2);
+    width: 0.25rem;
+    height: 5.4375rem;
+    flex-shrink: 0;
+  }
   & .entry {
     display: flex;
+    flex-direction: column;
+    padding: 0.65rem;
+    justify-content: space-between;
+    width: 100%;
+    & .descriptionAndValue {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     & .title {
       color: var(--grey-4, #212529);
       font-family: Nunito;

@@ -2,19 +2,21 @@ import React from "react";
 import DeleteButton from "../DeleteButton";
 import style from "../FinanceCard/FinanceCard.module.scss";
 
-const FinanceCard = ({ description, valor, valueType, onDelete }) => {
+const FinanceCard = ({ description, money, valueType, onDelete }) => {
+  const barClass = {
+    despesa: style.barGrey,
+    entrada: style.barGreen,
+  };
   return (
     <div className={style.main}>
-      <div className={style.barGreen}></div>
+      <div className={barClass[valueType.value]}></div>
       <div className={style.entry}>
-        <div>
+        <div className={style.descriptionAndValue}>
           <p className={style.title}>{description}</p>
-          <p>Valor: {valor}</p>
+          <p>R$ {money}</p>
         </div>
-        <div>
+        <div className={style.descriptionAndValue}>
           <p>{valueType.label}</p>
-        </div>
-        <div>
           <DeleteButton onClick={onDelete} />
         </div>
       </div>

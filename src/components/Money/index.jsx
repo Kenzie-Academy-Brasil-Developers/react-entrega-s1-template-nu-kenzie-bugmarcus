@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../Valor/Valor.module.css";
+import styles from "../Money/Money.module.scss";
 
-export const Valor = ({ value, onChange }) => {
+export const Money = ({ value, onChange }) => {
   const handleChange = (e) => {
     const inputValue = e.target.value;
     const sanitizedValue = inputValue.replace(/\D/g, "");
@@ -20,4 +20,4 @@ export const Valor = ({ value, onChange }) => {
   );
 };
 
-export default Valor;
+export default Money;

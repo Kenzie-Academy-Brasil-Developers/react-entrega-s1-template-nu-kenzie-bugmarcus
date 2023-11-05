@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  & .title {
+    color: var(--grey-4, #212529);
+
+    /* Title3 */
+    font-family: Nunito;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 187.5% */
+  }
+}

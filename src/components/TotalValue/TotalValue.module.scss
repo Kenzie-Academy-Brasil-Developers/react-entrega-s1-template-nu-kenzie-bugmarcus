@@ -1,0 +1,29 @@
+.main {
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-black);
+  height: 5rem;
+  flex-shrink: 0;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 1.25rem;
+  & .totalValue {
+    color: var(--grey-4, #212529);
+    font-family: Nunito;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 187.5% */
+    margin-bottom: 0.38rem;
+  }
+  .valueResult {
+    color: var(--color-primary, #fd377e);
+    /* Title3 */
+    font-family: Nunito;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 187.5% */
+  }
+}

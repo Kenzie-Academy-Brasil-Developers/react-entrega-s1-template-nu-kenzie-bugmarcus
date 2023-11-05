@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  border: solid 1px var(--border-black);
+  padding: 1.87rem 1.2rem;
+  gap: 0.625rem;
+  & .title {
+    font-family: var(--title1);
+    color: var(--grey-4);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem;
+  }
+  & .textArea {
+    display: flex;
+    background-color: red;
+  }
+  & .example {
+    color: var(--grey-50, #868e96);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+
+  & .button {
+    display: flex;
+    width: 19.625rem;
+    height: 3rem;
+    padding: 0.8125rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-primary, #fd377e);
+    background: var(--color-primary, #fd377e);
+    color: white;
+  }
+}

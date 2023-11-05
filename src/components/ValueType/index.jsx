@@ -1,7 +1,7 @@
 import React from "react";
 import Select from "react-select";
 import { typeOfValue } from "../../data/data";
-import styles from "../ValueType/ValueType.module.css";
+import styles from "../ValueType/ValueType.module.scss";
 
 export const ValueType = ({ value, onChange }) => {
   return (

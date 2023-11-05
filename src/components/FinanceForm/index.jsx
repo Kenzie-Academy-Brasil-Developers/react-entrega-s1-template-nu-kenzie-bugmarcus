@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Description from "../Description";
-import Valor from "../Valor";
+import Money from "../Money";
 import ValueType from "../ValueType";
-import styles from "../FinanceForm/FinanceForm.module.css";
+import styles from "../FinanceForm/FinanceForm.module.scss";
 
 const FinanceForm = ({ addFinanceItem }) => {
   const [formValues, setFormValues] = useState({
     description: "",
-    valor: "",
+    money: "",
     valueType: "",
   });
 
@@ -15,9 +15,16 @@ const FinanceForm = ({ addFinanceItem }) => {
     e.preventDefault();
     const newFinanceItem = {
       description: formValues.description,
-      valor: formValues.valor,
+      money: formValues.money,
       valueType: formValues.valueType,
     };
+    if (
+      newFinanceItem.description === "" ||
+      newFinanceItem.money === "" ||
+      newFinanceItem.valueType === ""
+    ) {
+      return;
+    }
     addFinanceItem(newFinanceItem);
   };
 
@@ -28,10 +35,10 @@ const FinanceForm = ({ addFinanceItem }) => {
     }));
   };
 
-  const handleValorChange = (value) => {
+  const handleMoneyChange = (value) => {
     setFormValues((prevValues) => ({
       ...prevValues,
-      valor: value,
+      money: value,
     }));
   };
 
@@ -50,7 +57,8 @@ const FinanceForm = ({ addFinanceItem }) => {
         onChange={handleDescriptionChange}
       />
       <p className={styles.example}>Ex: Compra de roupas</p>
-      <Valor value={formValues.valor} onChange={handleValorChange} />
+      <p>Valor (R$)</p>
+      <Money value={formValues.money} onChange={handleMoneyChange} />
       <p>Tipo de valor</p>
       <ValueType
         value={formValues.valueType}
