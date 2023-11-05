@@ -1,0 +1,23 @@
+.main {
+  border-radius: 0.25rem;
+  background: var(--grey-1, #f8f9fa);
+  display: flex;
+  & .barGreen {
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    background: var(--color-secondary, #03b898);
+    width: 0.25rem;
+    height: 5.4375rem;
+    flex-shrink: 0;
+  }
+  & .entry {
+    display: flex;
+    & .title {
+      color: var(--grey-4, #212529);
+      font-family: Nunito;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.875rem;
+    }
+  }
+}

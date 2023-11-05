@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState, useEffect } from "react";
 import FinanceForm from "./components/FinanceForm";
 import FinanceList from "./components/FinanceList";
@@ -21,12 +22,21 @@ const App = () => {
     localStorage.setItem("financeItems", JSON.stringify(newFinanceItems));
   };
 
+  const deleteFinanceItem = (index) => {
+    const updatedFinanceItems = financeItems.filter((_, i) => i !== index);
+    setFinanceItems(updatedFinanceItems);
+    localStorage.setItem("financeItems", JSON.stringify(updatedFinanceItems));
+  };
+
   return (
     <div>
       <Header />
       <div className={styles.bodyPage}>
         <FinanceForm addFinanceItem={addFinanceItem} />
-        <FinanceList financeItems={financeItems} />
+        <FinanceList
+          financeItems={financeItems}
+          deleteFinanceItem={deleteFinanceItem}
+        />
       </div>
     </div>
   );
